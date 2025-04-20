@@ -2,12 +2,12 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on Alancy的博客</title>
-    <link>https://example.org/zh-cn/tags/</link>
+    <link>/zh-cn/tags/</link>
     <description>Recent content in Tags on Alancy的博客</description>
     <generator>Hugo</generator>
     <language>zh-cn</language>
     <managingEditor>lmc162105@163.com (Alancy)</managingEditor>
     <webMaster>lmc162105@163.com (Alancy)</webMaster>
-    <atom:link href="https://example.org/zh-cn/tags/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="/zh-cn/tags/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>

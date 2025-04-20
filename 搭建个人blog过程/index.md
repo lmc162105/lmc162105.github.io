@@ -13,7 +13,7 @@
 
 在浏览器上搜索🍺[Homebrew](https://brew.sh)，进入官网后将看到
 
-<img src="./images/image-20250420191328185.png">
+<img src="/images/image-20250420191328185.png">
 
 将这段代码复制到终端并执行。
 
@@ -23,7 +23,7 @@
 
 此时，进入[清华大学开源软件镜像站](https://mirrors.tuna.tsinghua.edu.cn)中搜索homebrew
 
-<img src="./images/image-20250420192052622.png">
+<img src="/images/image-20250420192052622.png">
 
 点击进入第一个[homebrew](https://mirrors.tuna.tsinghua.edu.cn/help/homebrew/)，复制页面中所提示的首次安装homebrew应在终端输入设置的环境变量：
 
