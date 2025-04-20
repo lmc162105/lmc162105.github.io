@@ -1,0 +1,10 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>Alancy的博客</title>
+        <link>https://lmc162105.github.io/zh-cn/</link>
+        <description>Alancy的个人博客</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-cn</language><managingEditor>lmc162105@163.com (Alancy)</managingEditor>
+            <webMaster>lmc162105@163.com (Alancy)</webMaster>
+            <atom:link href="https://lmc162105.github.io/zh-cn/index.xml" rel="self" type="application/rss+xml" />
+        </channel>
+</rss>

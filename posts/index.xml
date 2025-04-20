@@ -1,0 +1,16 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>All Posts - Alancy&#39;s Blog</title>
+        <link>https://lmc162105.github.io/posts/</link>
+        <description>All Posts | Alancy&#39;s Blog</description>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>lmc162105@163.com (Alancy)</managingEditor>
+            <webMaster>lmc162105@163.com (Alancy)</webMaster><lastBuildDate>Sun, 20 Apr 2025 18:25:31 &#43;0800</lastBuildDate><atom:link href="https://lmc162105.github.io/posts/" rel="self" type="application/rss+xml" /><item>
+    <title>First</title>
+    <link>https://lmc162105.github.io/first/</link>
+    <pubDate>Sun, 20 Apr 2025 18:25:31 &#43;0800</pubDate>
+    <author>Alancy</author>
+    <guid>https://lmc162105.github.io/first/</guid>
+    <description><![CDATA[]]></description>
+</item>
+</channel>
+</rss>
