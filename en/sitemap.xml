@@ -2,32 +2,33 @@
     xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
     xmlns:xhtml="http://www.w3.org/1999/xhtml"
     ><url>
-            <loc>https://lmc162105.github.io/</loc><lastmod>2025-04-20T18:25:31&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority><xhtml:link
+            <loc>https://example.org/</loc><lastmod>2025-04-20T18:55:53&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority><xhtml:link
                         rel="alternate"
                         hreflang="zh-cn"
-                        href="https://lmc162105.github.io/zh-cn/"
+                        href="https://example.org/zh-cn/"
                         /><xhtml:link
                     rel="alternate"
                     hreflang="en"
-                    href="https://lmc162105.github.io/"
+                    href="https://example.org/"
                     /></url><url>
-            <loc>https://lmc162105.github.io/first/</loc><lastmod>2025-04-20T18:25:31&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
-            <loc>https://lmc162105.github.io/posts/</loc><lastmod>2025-04-20T18:25:31&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
-            <loc>https://lmc162105.github.io/categories/</loc><changefreq>weekly</changefreq><priority>0.5</priority><xhtml:link
+            <loc>https://example.org/posts/</loc><lastmod>2025-04-20T18:55:53&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
+            <loc>https://example.org/%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BAblog%E8%BF%87%E7%A8%8B/</loc><lastmod>2025-04-20T18:55:53&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
+            <loc>https://example.org/first/</loc><lastmod>2025-04-20T18:25:31&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
+            <loc>https://example.org/categories/</loc><changefreq>weekly</changefreq><priority>0.5</priority><xhtml:link
                         rel="alternate"
                         hreflang="zh-cn"
-                        href="https://lmc162105.github.io/zh-cn/categories/"
+                        href="https://example.org/zh-cn/categories/"
                         /><xhtml:link
                     rel="alternate"
                     hreflang="en"
-                    href="https://lmc162105.github.io/categories/"
+                    href="https://example.org/categories/"
                     /></url><url>
-            <loc>https://lmc162105.github.io/tags/</loc><changefreq>weekly</changefreq><priority>0.5</priority><xhtml:link
+            <loc>https://example.org/tags/</loc><changefreq>weekly</changefreq><priority>0.5</priority><xhtml:link
                         rel="alternate"
                         hreflang="zh-cn"
-                        href="https://lmc162105.github.io/zh-cn/tags/"
+                        href="https://example.org/zh-cn/tags/"
                         /><xhtml:link
                     rel="alternate"
                     hreflang="en"
-                    href="https://lmc162105.github.io/tags/"
+                    href="https://example.org/tags/"
                     /></url></urlset>

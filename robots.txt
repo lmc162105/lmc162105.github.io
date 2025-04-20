@@ -61,4 +61,4 @@ Disallow: /
 User-agent: ZoominfoBot
 Disallow: /
 
-Sitemap: https://lmc162105.github.io/sitemap.xml
+Sitemap: https://example.org/sitemap.xml
