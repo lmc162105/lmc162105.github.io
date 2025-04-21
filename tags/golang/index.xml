@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Golang on Alancy的个人博客</title>
+    <link>/tags/golang/</link>
+    <description>Recent content in Golang on Alancy的个人博客</description>
+    <generator>Hugo</generator>
+    <language>zh-CN</language>
+    <managingEditor>lmc162105@163.com (Alancy)</managingEditor>
+    <webMaster>lmc162105@163.com (Alancy)</webMaster>
+    <lastBuildDate>Tue, 15 Apr 2025 18:55:53 +0800</lastBuildDate>
+    <atom:link href="/tags/golang/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>go语言圣经学习笔记</title>
+      <link>/go%E8%AF%AD%E8%A8%80%E5%9C%A3%E7%BB%8F/</link>
+      <pubDate>Tue, 15 Apr 2025 18:55:53 +0800</pubDate><author>lmc162105@163.com (Alancy)</author>
+      <guid>/go%E8%AF%AD%E8%A8%80%E5%9C%A3%E7%BB%8F/</guid>
+      <description>&lt;h1 id=&#34;一golang脑图&#34;&gt;一、golang脑图&lt;/h1&gt;&#xA;&lt;p&gt;&lt;img&#xA;        class=&#34;lazyload&#34;&#xA;        src=&#34;/svg/loading.min.svg&#34;&#xA;        data-src=&#34;https://camo.githubusercontent.com/14ae0ae04052757a75e9f3790912ca4fde5d606e4c02d3f96c5f985fed3b4a56/68747470733a2f2f63646e2e6a7364656c6976722e6e65742f67682f7869616f626169546563682f696d6167652f2545352539302538452545372541422541462545362538382539302545392539352542462545382542372541462545372542412542462e706e67&#34;&#xA;        data-srcset=&#34;https://camo.githubusercontent.com/14ae0ae04052757a75e9f3790912ca4fde5d606e4c02d3f96c5f985fed3b4a56/68747470733a2f2f63646e2e6a7364656c6976722e6e65742f67682f7869616f626169546563682f696d6167652f2545352539302538452545372541422541462545362538382539302545392539352542462545382542372541462545372542412542462e706e67, https://camo.githubusercontent.com/14ae0ae04052757a75e9f3790912ca4fde5d606e4c02d3f96c5f985fed3b4a56/68747470733a2f2f63646e2e6a7364656c6976722e6e65742f67682f7869616f626169546563682f696d6167652f2545352539302538452545372541422541462545362538382539302545392539352542462545382542372541462545372542412542462e706e67 1.5x, https://camo.githubusercontent.com/14ae0ae04052757a75e9f3790912ca4fde5d606e4c02d3f96c5f985fed3b4a56/68747470733a2f2f63646e2e6a7364656c6976722e6e65742f67682f7869616f626169546563682f696d6167652f2545352539302538452545372541422541462545362538382539302545392539352542462545382542372541462545372542412542462e706e67 2x&#34;&#xA;        data-sizes=&#34;auto&#34;&#xA;        alt=&#34;https://camo.githubusercontent.com/14ae0ae04052757a75e9f3790912ca4fde5d606e4c02d3f96c5f985fed3b4a56/68747470733a2f2f63646e2e6a7364656c6976722e6e65742f67682f7869616f626169546563682f696d6167652f2545352539302538452545372541422541462545362538382539302545392539352542462545382542372541462545372542412542462e706e67&#34;&#xA;        title=&#34;img&#34; /&gt;&lt;/p&gt;&#xA;&lt;p&gt;截至目前，golang后端开发的基础学习阶段已经结束，后端开发四大件已经基本接触完成，但既然是基础，就证明还没有一个深刻的印象。&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>
