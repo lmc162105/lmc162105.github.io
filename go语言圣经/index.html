@@ -1,0 +1,594 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <title> - Alancy的个人博客</title><meta name="Description" content="Alancy的个人博客"><meta property="og:url" content="/go%E8%AF%AD%E8%A8%80%E5%9C%A3%E7%BB%8F/">
+  <meta property="og:site_name" content="Alancy的个人博客">
+  <meta property="og:title" content="Alancy的个人博客">
+  <meta property="og:description" content="一、golang脑图 截至目前，golang后端开发的基础学习阶段已经结束，后端开发四大件已经基本接触完成，但既然是基础，就证明还没有一个深刻的印象。">
+  <meta property="og:locale" content="zh_CN">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="og:image" content="/">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="/">
+  <meta name="twitter:title" content="Alancy的个人博客">
+  <meta name="twitter:description" content="一、golang脑图 截至目前，golang后端开发的基础学习阶段已经结束，后端开发四大件已经基本接触完成，但既然是基础，就证明还没有一个深刻的印象。">
+<meta name="application-name" content="我的网站">
+<meta name="apple-mobile-web-app-title" content="我的网站"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="/go%E8%AF%AD%E8%A8%80%E5%9C%A3%E7%BB%8F/" /><link rel="next" href="/%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BAblog%E8%BF%87%E7%A8%8B/" /><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" href="/lib/fontawesome-free/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"></noscript><link rel="preload" href="/lib/animate/animate.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="/lib/animate/animate.min.css"></noscript><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "",
+        "inLanguage": "zh-CN",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "\/go%E8%AF%AD%E8%A8%80%E5%9C%A3%E7%BB%8F\/"
+        },"genre": "posts","wordcount":  6416 ,
+        "url": "\/go%E8%AF%AD%E8%A8%80%E5%9C%A3%E7%BB%8F\/","publisher": {
+            "@type": "Organization",
+            "name": ""},"author": {
+                "@type": "Person",
+                "name": "Alancy"
+            },"description": ""
+    }
+    </script></head>
+    <body data-header-desktop="fixed" data-header-mobile="auto"><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('dark' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : 'dark' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
+
+        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/" title="Alancy的个人博客"><span class="header-title-pre">❤️</span>Alancy&#39;s site</a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="/posts/" title="所有文章"> 文章 </a><a class="menu-item" href="/tags/" title="所有标签"> 标签 </a><span class="menu-item delimiter"></span><span class="menu-item search" id="search-desktop">
+                        <input type="text" placeholder="搜索文章标题或内容..." id="search-input-desktop">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-desktop" title="搜索">
+                            <i class="fas fa-search fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-desktop" title="清空">
+                            <i class="fas fa-times-circle fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-desktop">
+                            <i class="fas fa-spinner fa-fw fa-spin" aria-hidden="true"></i>
+                        </span>
+                    </span><a href="javascript:void(0);" class="menu-item theme-switch" title="切换主题">
+                    <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+                </a></div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/" title="Alancy的个人博客"><span class="header-title-pre">❤️</span>Alancy&#39;s site</a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><div class="search-wrapper">
+                    <div class="search mobile" id="search-mobile">
+                        <input type="text" placeholder="搜索文章标题或内容..." id="search-input-mobile">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-mobile" title="搜索">
+                            <i class="fas fa-search fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-mobile" title="清空">
+                            <i class="fas fa-times-circle fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-mobile">
+                            <i class="fas fa-spinner fa-fw fa-spin" aria-hidden="true"></i>
+                        </span>
+                    </div>
+                    <a href="javascript:void(0);" class="search-cancel" id="search-cancel-mobile">
+                        取消
+                    </a>
+                </div><a class="menu-item" href="/posts/" title="所有文章">文章</a><a class="menu-item" href="/tags/" title="所有标签">标签</a><a href="javascript:void(0);" class="menu-item theme-switch" title="切换主题">
+                <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+            </a></div>
+    </div>
+</header><div class="search-dropdown desktop">
+        <div id="search-dropdown-desktop"></div>
+    </div>
+    <div class="search-dropdown mobile">
+        <div id="search-dropdown-mobile"></div>
+    </div><main class="main">
+                <div class="container"><div class="toc" id="toc-auto">
+            <h2 class="toc-title">目录</h2>
+            <div class="toc-content" id="toc-content-auto"></div>
+        </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX"></h1><div class="post-meta">
+            <div class="post-meta-line"><span class="post-author"><a href="https://alancy.github.io" title="Author" target="_blank" rel="noopener noreffer author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>Alancy</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="0001-01-01">0001-01-01</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;约 6416 字&nbsp;
+                <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;预计阅读 13 分钟&nbsp;</div>
+        </div><div class="details toc" id="toc-static"  data-kept="">
+                <div class="details-summary toc-title">
+                    <span>目录</span>
+                    <span><i class="details-icon fas fa-angle-right" aria-hidden="true"></i></span>
+                </div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#1程序结构">1.程序结构</a>
+      <ul>
+        <li><a href="#11变量">1.1变量</a>
+          <ul>
+            <li><a href="#111简短声明变量">1.1.1简短声明变量</a></li>
+            <li><a href="#112指针">1.1.2指针</a></li>
+            <li><a href="#113new函数">1.1.3.new函数</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+    <li><a href="#2基础数据类型">2.基础数据类型</a></li>
+    <li><a href="#3复合数据类型">3.复合数据类型</a>
+      <ul>
+        <li><a href="#31slice">3.1.slice</a>
+          <ul>
+            <li><a href="#311append函数">3.1.1.append函数</a></li>
+          </ul>
+        </li>
+        <li><a href="#32map">3.2Map</a></li>
+        <li><a href="#33结构体">3.3.结构体</a></li>
+        <li><a href="#34json">3.4.JSON</a></li>
+      </ul>
+    </li>
+    <li><a href="#4函数">4.函数</a>
+      <ul>
+        <li><a href="#41函数声明">4.1函数声明</a></li>
+        <li><a href="#42递归">4.2递归</a></li>
+        <li><a href="#43多返回值">4.3多返回值</a></li>
+        <li><a href="#44匿名函数">4.4匿名函数</a></li>
+        <li><a href="#45可变参数">4.5.可变参数</a></li>
+        <li><a href="#46deferred函数">4.6.Deferred函数</a></li>
+        <li><a href="#47panic异常">4.7.Panic异常</a></li>
+        <li><a href="#48recover捕获异常">4.8.Recover捕获异常</a></li>
+      </ul>
+    </li>
+    <li><a href="#5方法">5.方法</a>
+      <ul>
+        <li><a href="#51方法声明">5.1.方法声明</a></li>
+        <li><a href="#52基于指针对象的方法">5.2基于指针对象的方法</a>
+          <ul>
+            <li><a href="#521nil也是一个合法的接收器类型">5.2.1.nil也是一个合法的接收器类型</a></li>
+          </ul>
+        </li>
+        <li><a href="#53封装">5.3.封装</a></li>
+      </ul>
+    </li>
+    <li><a href="#6接口">6.接口</a>
+      <ul>
+        <li><a href="#61接口约定">6.1接口约定</a></li>
+        <li><a href="#62接口类型">6.2接口类型</a></li>
+        <li><a href="#63实现接口的条件">6.3.实现接口的条件</a></li>
+        <li><a href="#64类型断言">6.4类型断言</a></li>
+      </ul>
+    </li>
+    <li><a href="#7go-routines和channels">7.Go routines和Channels</a>
+      <ul>
+        <li><a href="#71go-routines">7.1.Go routines</a></li>
+        <li><a href="#72channel">7.2.Channel</a>
+          <ul>
+            <li><a href="#721channel的关闭">7.2.1.channel的关闭</a></li>
+            <li><a href="#722不带缓存的channel">7.2.2.不带缓存的channel</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</nav></div>
+            </div><div class="content" id="content"><h1 id="一golang脑图">一、golang脑图</h1>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="https://camo.githubusercontent.com/14ae0ae04052757a75e9f3790912ca4fde5d606e4c02d3f96c5f985fed3b4a56/68747470733a2f2f63646e2e6a7364656c6976722e6e65742f67682f7869616f626169546563682f696d6167652f2545352539302538452545372541422541462545362538382539302545392539352542462545382542372541462545372542412542462e706e67"
+        data-srcset="https://camo.githubusercontent.com/14ae0ae04052757a75e9f3790912ca4fde5d606e4c02d3f96c5f985fed3b4a56/68747470733a2f2f63646e2e6a7364656c6976722e6e65742f67682f7869616f626169546563682f696d6167652f2545352539302538452545372541422541462545362538382539302545392539352542462545382542372541462545372542412542462e706e67, https://camo.githubusercontent.com/14ae0ae04052757a75e9f3790912ca4fde5d606e4c02d3f96c5f985fed3b4a56/68747470733a2f2f63646e2e6a7364656c6976722e6e65742f67682f7869616f626169546563682f696d6167652f2545352539302538452545372541422541462545362538382539302545392539352542462545382542372541462545372542412542462e706e67 1.5x, https://camo.githubusercontent.com/14ae0ae04052757a75e9f3790912ca4fde5d606e4c02d3f96c5f985fed3b4a56/68747470733a2f2f63646e2e6a7364656c6976722e6e65742f67682f7869616f626169546563682f696d6167652f2545352539302538452545372541422541462545362538382539302545392539352542462545382542372541462545372542412542462e706e67 2x"
+        data-sizes="auto"
+        alt="https://camo.githubusercontent.com/14ae0ae04052757a75e9f3790912ca4fde5d606e4c02d3f96c5f985fed3b4a56/68747470733a2f2f63646e2e6a7364656c6976722e6e65742f67682f7869616f626169546563682f696d6167652f2545352539302538452545372541422541462545362538382539302545392539352542462545382542372541462545372542412542462e706e67"
+        title="img" /></p>
+<p>截至目前，golang后端开发的基础学习阶段已经结束，后端开发四大件已经基本接触完成，但既然是基础，就证明还没有一个深刻的印象。</p>
+<p>因此，自25.04.17日到4.30为止，要进行为期两周的特殊训练，在此期间，每天要进行4道算法题的设计，一个中等体量的开源项目实战，以及对go语言圣经的深度学习。</p>
+<p>别忘了中间件的使用、go语言标准库和go八股文的学习。</p>
+<hr>
+<h1 id="二go语言圣经">二、go语言圣经</h1>
+<h2 id="1程序结构">1.程序结构</h2>
+<h3 id="11变量">1.1变量</h3>
+<p>var声明语句可以创建一个特定类型的变量，然后给变量附加一个名字，并设置变量的初始值。一般语法如下</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">var 变量名称 <span class="nv">变量类型</span> <span class="o">=</span> 表达式
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>也可以在一个声明语句中同时声明一组变量，如果省略每个变量的类型，将可以声明多个类型不同的变量</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">var a, b, <span class="nv">c</span> <span class="o">=</span> true, 2.3, <span class="s2">&#34;four&#34;</span> //bool,float64,string
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h4 id="111简短声明变量">1.1.1简短声明变量</h4>
+<p>在函数内部，有一种称为简短变量声明语句的形式可用于声明和初始化<code>局部变量</code>。</p>
+<p>它以“名字  := 表达式“的形式声明变量，变量的类型根据表达式来自动推导。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">str :<span class="o">=</span> <span class="s2">&#34;i am a string&#34;</span>
+</span></span><span class="line"><span class="cl">num :<span class="o">=</span> <span class="m">10</span>
+</span></span><span class="line"><span class="cl">t :<span class="o">=</span> 2.3
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>因为简洁和灵活的特点，简短变量声明被管饭的应用与大部分的局部变量的声明和初始化。var形式的声明语句往往是用于需要显式指定变量类型的地方，后者变量稍后会被重新赋值而初始值无关紧要的地方。</p>
+<blockquote>
+<p>请记住“:=”是一个变量声明语句，而“=”是一个变量赋值操作</p></blockquote>
+<h4 id="112指针">1.1.2指针</h4>
+<p>一个指针的值是另一个变量的地址。一个指针对应变量在内存中的存储位置。</p>
+<h4 id="113new函数">1.1.3.new函数</h4>
+<p>另一个创建变量的方法是调用内建的new函数。表达式new(T)将创建一个T类型的匿名变量，初始化为T类型的零值，然后返回变量地址，返回的指针类型为*T</p>
+<hr>
+<h2 id="2基础数据类型">2.基础数据类型</h2>
+<p>Go语言将数据类型分成四类：基础类型、复合类型、引用类型和接口类型。</p>
+<p>引用类型包括指针、切片、map字典、函数、channel。</p>
+<hr>
+<h2 id="3复合数据类型">3.复合数据类型</h2>
+<h3 id="31slice">3.1.slice</h3>
+<p>slice代表变长的序列，序列中每个元素都有相同的类型。一个slice类型一般写作<code>[]T</code>，其中T代表了slice中元素的类型</p>
+<p>数组和slice之间有着紧密的联系，一个slice是一个轻量级的数据结构。</p>
+<p>一个slice由三个部分组成：指针、长度和容量。</p>
+<p>多个slice之间可以共享底层的数据。</p>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="https://gopl-zh.github.io/images/ch4-01.png"
+        data-srcset="https://gopl-zh.github.io/images/ch4-01.png, https://gopl-zh.github.io/images/ch4-01.png 1.5x, https://gopl-zh.github.io/images/ch4-01.png 2x"
+        data-sizes="auto"
+        alt="https://gopl-zh.github.io/images/ch4-01.png"
+        title="img" /></p>
+<p>值得注意的是，slice不同于数组，slice之间不能比较，因此我们不能使用==操作符来判断两个slice之间是否含有全部相等元素。不过标准库提供了高度优化的<code>bytes.Equal</code>函数来判断两个字节型slice是否相等([]byte)。</p>
+<p>如果你需要测试一个slice是否为空，使用len（）==0来判断，而不应该用s==nil来判断。</p>
+<p>内置的make函数创建一个指定元素类型、长度和容量的slice。容量部分可以省略，在这种情况下，容量将等于长度。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">make<span class="o">([]</span>T, len<span class="o">)</span>
+</span></span><span class="line"><span class="cl">make<span class="o">([]</span>T, len, cap<span class="o">)</span> //same as make<span class="o">([]</span>T, cap<span class="o">)[</span>:len<span class="o">]</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h4 id="311append函数">3.1.1.append函数</h4>
+<p>内置的append函数用于想slice追加元素</p>
+<h3 id="32map">3.2Map</h3>
+<p>哈希表是一巧妙并且实用的数据结构。它是一个无序的key/value对的集合。</p>
+<p>内置的make函数可以创建一个map：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">ages :<span class="o">=</span> make<span class="o">(</span>map<span class="o">[</span>string<span class="o">]</span>int<span class="o">)</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>因此，另一种创建空的map的表达式是<code>map[string]int{}</code></p>
+<p>使用内置的delete函数可以删除元素：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">delete<span class="o">(</span>ages, <span class="s2">&#34;alice&#34;</span><span class="o">)</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>所有的这些操作都是安全的，即使这些元素不在map中也没有关系；如果一个查找失败将返回value烈性对应的零值。</p>
+<p>但map中的元素并不是一个变量，因此我们不能对map的元素进行取之操作。</p>
+<p>禁止对map元素去值得原因是map可能随着元素数量的增长而重新分配更大的内存空间，从而导致之前地址无效。</p>
+<p>mpa类型的零值是nil，也就是没有引用任何哈希表。map上的大部分操作都可以安全工作在nil值的map上。</p>
+<p>和slice一样，map之间也不能进行相等比较，唯一的例外是和nil进行比较。</p>
+<h3 id="33结构体">3.3.结构体</h3>
+<p>结构体是一种聚合的书籍类型，是由零个或多个人一类型的值聚合成的实体。</p>
+<p>结构体的零值是每个成员都是零值。</p>
+<p>如果结构体没有任何成员的话即时空结构体，写作<code>struct{}</code>.</p>
+<p>如果考虑效率的话，较大的结构体通常会用指针的方式传入和返回。如果要在函数你不修改结构体成员的话，用指针传入是必须的。</p>
+<p>如果结构体的全部成员都是可以比较的，那么结构体也是可以比较的，那样的话两个结构体将可以使用==后!=运算符进行比较。</p>
+<p>Go语言有一个特性让我们只声明一个成员对应的数据类型而不指定成员的名字，这类成员就叫匿名成员。</p>
+<h3 id="34json">3.4.JSON</h3>
+<p>javascript对象表示法是一种用于发送和接收结构化信息的标准协议。</p>
+<p>许多web服务都提供json借口，通过HTTP借口json格式请求并返回json格式的信息。</p>
+<hr>
+<h2 id="4函数">4.函数</h2>
+<blockquote>
+<p>函数参数的传递方式</p></blockquote>
+<p>1.值传递</p>
+<p>2.引用传递</p>
+<p>不管是只床底还是引用传递，传递给函数的都是变量的副本，不同的是，值传递的是值的拷贝，引用传递的是地址的拷贝</p>
+<p>一般来说，地址拷贝的效率更高。</p>
+<h3 id="41函数声明">4.1函数声明</h3>
+<p>函数声明包括函数名、形式参数列表、返回值列表。其中返回值列表可以省略。</p>
+<h3 id="42递归">4.2递归</h3>
+<p>函数是可以递归的，这意味着函数可以直接或者间接的点用自身。</p>
+<h3 id="43多返回值">4.3多返回值</h3>
+<p>在go中，一个函数可以返回多个值。</p>
+<p>调用多返回值函数时，返回给调用者的是一组值，调用者必须显示的将这些值分配给这些变量。</p>
+<p>如果某个值不被使用，则可以将其分配给blank identifier&quot;_&quot;。</p>
+<p>如果一个函数所有的返回值都有显式的变量名，那么该函数的return语句可以省略操作数，这称之为bare return。</p>
+<h3 id="44匿名函数">4.4匿名函数</h3>
+<p>拥有函数名的函数只能在包级语法块中被声明，，通过函数字面量，我们可以绕过这一限制，在任何表达式中表示一个函数值。函数字面量的语法和函数声明相似，区别在于func关键字后面有没有函数名。</p>
+<p>当匿名函数需要别递归调用时，我们必须首先声明一个变量，再将匿名函数赋值给这个变量。</p>
+<h3 id="45可变参数">4.5.可变参数</h3>
+<p>参数数量可变的函数被称为可变参数函数。</p>
+<p>声明可变参数函数是，需要在参数列表的最后一个参数类型之前加上一个省略符号“&hellip;“，者表示该函数会接受任意数量的该类型参数。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">func sum<span class="o">(</span>vals ...int<span class="o">)</span> int <span class="o">{</span>
+</span></span><span class="line"><span class="cl">    total :<span class="o">=</span> <span class="m">0</span>
+</span></span><span class="line"><span class="cl">    <span class="k">for</span> _, val :<span class="o">=</span> range vals <span class="o">{</span>
+</span></span><span class="line"><span class="cl">        <span class="nv">total</span> <span class="o">+=</span> val
+</span></span><span class="line"><span class="cl">    <span class="o">}</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> total
+</span></span><span class="line"><span class="cl"><span class="o">}</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="46deferred函数">4.6.Deferred函数</h3>
+<p>在函数只能够，程序员经常需要创建资源，为了在函数执行完毕后，及时的释放资源，Go的设计者提供了defer</p>
+<p>你可以在一个函数中执行多条defer语句，他们的执行顺序与声明顺序相反。</p>
+<blockquote>
+<p>defer细节说明</p></blockquote>
+<p>1.当go执行到一个defer时，不会立即执行defer后的语句，ershijiangdefer后的语句压到一个栈中；</p>
+<p>2.当函数执行完毕后，再从defer栈中依次从栈顶取出语句执行；</p>
+<p>3.在defer将语句压入到栈中时，也会将相关的值拷贝入栈。</p>
+<p>defer的主要价值是在，当语句执行完毕后，可以及时的释放函数创建的资源，当函数完毕后，系统会以此从defer栈中取出语句，关闭资源。</p>
+<h3 id="47panic异常">4.7.Panic异常</h3>
+<p>一般而言，当panic异常发生时，程序会中断运行，并立即执行在该goroutine中被延迟的函数（defer机制）。随后，程序崩溃并输出日志信息。</p>
+<p>不是所有的panic异常都来自于运行时，直接调用内置的panic函数也会引发panic异常。</p>
+<p>由于panic会引起程序的崩溃，因此panic一般用于严重错误。</p>
+<h3 id="48recover捕获异常">4.8.Recover捕获异常</h3>
+<p>通常来说，不应该对panic异常做任何处理，但有时我们可以从异常中恢复，至少我们可以在程序崩溃前做一些操作。</p>
+<p>如果在deferred函数中调用了内置函数recover，并且定义该defer语句的函数发生了painc异常，recover会使程序从painc中恢复，并返回panic value。导致panic异常的函数不会继续运行，但能正常返回。</p>
+<hr>
+<h2 id="5方法">5.方法</h2>
+<p>Golang中的方法是作用在指定的数据类型上，因此自定义类型都可以有方法。</p>
+<h3 id="51方法声明">5.1.方法声明</h3>
+<p>在函数声明时，在其名字之前放上一个变量，即是一个方法。</p>
+<p>在go语言中，我们并不会像其他语言一样使用this或self作为接收器，我们可以任意的选择接收器的名字。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">func<span class="o">(</span>reciver <span class="nb">type</span><span class="o">)</span> methodName<span class="o">(</span>实参列表<span class="o">)</span>（返回值列表）<span class="o">{</span>...<span class="o">}</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>1.结构体类型是值类型，遵守值类型的传递机制；</p>
+<p>2.若希望在方法中修改结构体变量的值，可以通过结构体指针的方式；</p>
+<p>3.再通过一个变量去调用方法时，其调用机制和函数一样；</p>
+<p>4.变量调用方法时，该变量本身也会作为一个参数传递到方法。</p>
+<blockquote>
+<p>方法和函数的区别</p></blockquote>
+<p>1.调用方式不一样</p>
+<p>​	函数的调用方式：函数名(实参列表)</p>
+<p>​	方法的调用方式：变量名.方法名(实参列表)</p>
+<p>2.对于普通函数，接受者为值类型时，不能将指针类型的数据直接传递；</p>
+<p>3.对于方法，接受者作为值类型时，可以直接使用指针类型的变量调用。</p>
+<h3 id="52基于指针对象的方法">5.2基于指针对象的方法</h3>
+<p>当调用一个函数时，会对其每一个参数值进行拷贝，如果一个函数需要更新一个变量，或者函数的其中一个参数实在太大我们希望能够避免这种默认的拷贝，这种情况下就需要用到指针了。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">func <span class="o">(</span>p *Point<span class="o">)</span> ScaleBy<span class="o">(</span>factor float64<span class="o">)</span> <span class="o">{</span>
+</span></span><span class="line"><span class="cl">    p.X *<span class="o">=</span> factor
+</span></span><span class="line"><span class="cl">    p.Y *<span class="o">=</span> factor
+</span></span><span class="line"><span class="cl"><span class="o">}</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>这个方法的名字是<code>(*piont).ScanleBy</code>,这里的括号是必须的。</p>
+<p>在现实的程序里，一半约定如果Point这个泪有一个指针作为接收器的方法，那么所有的point的方法都必须有一个指针接收器</p>
+<p>在每一个合法的方式调用表达式中，也就是下面这三种情况里的任意一种情况都是可以的：</p>
+<p>1.几首期的实际参数和其形式参数是相同的类型，比如两者都是类型T或者*T；</p>
+<p>2.接收器实参是类型T，但接收器的形参是类型*T，这种情况下表一起会隐式的为我们取变量的地址；</p>
+<p>3.接收器实参是类型*T，形参是类型T，编译器会隐式的为我们解引用，取到指针指向的实际变量。</p>
+<h4 id="521nil也是一个合法的接收器类型">5.2.1.nil也是一个合法的接收器类型</h4>
+<p>就像一些函数允许nil指针作为参数一样，方法理论上也可以用nil指针作为其接收器，尤其当nil对于对象来说是合法的零值时，比如map或者slice</p>
+<h3 id="53封装">5.3.封装</h3>
+<p>一个对象的变量或者方法如果对调用方是不可见的话，一般就被定义为“封装”。封装有时候也被叫做信息隐藏，同时也是main想对象编程最关键的一个方面。</p>
+<blockquote>
+<p>封装的优点</p></blockquote>
+<p>首先，因为调用方不能直接修改对象的变量值，七只需要关注少量的语句并且只要弄懂少量变量的可能的值即可；</p>
+<p>其次，隐藏实现的细节，可以防止调用方以来那些可能变化的具体实现，这样是设计包的程序员在不破坏对外的api情况下能得到更大的自由；</p>
+<p>最后，是阻止了外部调用方对对象内部的值任意的进行修改。</p>
+<hr>
+<h2 id="6接口">6.接口</h2>
+<p>接口类型是对其他类型行为的抽象和概括；因为接口类型不会喝特定的实现细节绑定在一起，通过这种抽象的方式我们可以让函数更加的灵活和更具有适应能力。</p>
+<blockquote>
+<p>细节：</p>
+<p>1.接口本身不能创建实例，但是可以指向一个实现了该接口的自定义类型变量；</p>
+<p>2.接口中的所有方法都没有方法体，即都是未实现的方法；</p>
+<p>3.在go中，一个自定义类型需要讲某个接口的所有方法都实现，即这个自定义类型实现了该接口；</p>
+<p>4.一个自定义类型只有实现了某个接口，才能将该自定义类型的实例赋给接口；</p>
+<p>5.只要是自定义数据类型，就可以实现接口；</p>
+<p>6.一个自定义类型可以实现多个接口；</p>
+<p>7.golang借口中不能有任何变量；</p>
+<p>8.一个接口可以继承多个别的接口，这时实现该接口，需将全体实现；</p>
+<p>9.interface默认是一个指针类型，如果没有初始化就使用，则输出nil</p>
+<p>10.空接口<code>interface{}</code>没有任何方法，所以所有类型都实现了空接口，即我们可以把任何一个变量赋给空接口。</p></blockquote>
+<h3 id="61接口约定">6.1接口约定</h3>
+<p>接口类型是一种抽象的类型。</p>
+<p>接口类型可以定义一组方法，但是这些方法不需要实现，并且接口不能包含任何的变量。</p>
+<h3 id="62接口类型">6.2接口类型</h3>
+<p>基本语法：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl"><span class="nb">type</span> 接口名 interface <span class="o">{</span>
+</span></span><span class="line"><span class="cl">	method1 <span class="o">(</span>参数列表<span class="o">)</span> <span class="o">(</span>返回值列表<span class="o">)</span>
+</span></span><span class="line"><span class="cl"><span class="o">}</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>1.接口里所有的方法都没有方法体，即接口的方法都是没有实现的方法，接口体现了程序设计的多态和高内聚低耦合的思想；</p>
+<p>2.golang中的接口，不需要显式的实现，只需要一个变量，含有接口中的所有的方法，那么这个变量就实现这个接口。</p>
+<h3 id="63实现接口的条件">6.3.实现接口的条件</h3>
+<p>一个类型如果拥有一个接口所需要的所有方法，那么这个类型就实现了这个接口。</p>
+<p>接口指定的规则非常简单：表达一个类型属于某个接口只要这个类型实现这个接口。</p>
+<h3 id="64类型断言">6.4类型断言</h3>
+<p>类型断言时一个使用在接口之上的操作。语法上他看起来像x.(T)被称为断言类型，这里的x表示一个就扣的类型和T表示一个类型。</p>
+<p>这里有两种可能，第一种，如果断言的类型T是一个具体类型，然后类型断言检查X的动态类型是否和T相同，如果这个检查成功了，类型断言的结果是x的动态值，当然他的类型是T。如果检查时报，接下来的操作会抛出panic</p>
+<hr>
+<h2 id="7go-routines和channels">7.Go routines和Channels</h2>
+<p>并发程序指同时进行多个任务的程序，随着硬件的发展，并发程序变得越来越重要。</p>
+<h3 id="71go-routines">7.1.Go routines</h3>
+<p>在go语言中，每一个并发的执行单元叫做一个goroutine。</p>
+<blockquote>
+<p>进程和线程的区别</p></blockquote>
+<p>1.进程就是陈古仔操作系统中的一次执行过程模式系统进行资源分配和调度的基本单位；</p>
+<p>2.线城市进程的一个执行实例，是执行程序的最小单元，它是比进程更小的能独立运行的基本单位；</p>
+<p>3.一个进程可以创建和销毁多个线程，同一个进程中的多个线程可以并发执行；</p>
+<p>4.一个程序至少有一个进程，一个进程至少有一个线程。</p>
+<blockquote>
+<p>并发和并行</p></blockquote>
+<p>1.多线程程序在单核上运行就是并发；</p>
+<p>2.多线程程序在多核上运行就是并行。</p>
+<blockquote>
+<p>Go协程和主线程</p></blockquote>
+<p>1.go主线程：在一个go线程上，可以起多个协程</p>
+<p>2.go协程的特点：</p>
+<p>​	1)有独立的栈空间；</p>
+<p>​	2)共享程序堆空间；</p>
+<p>​	3)调度由用户控制；</p>
+<p>​	4)协程是轻量级的线程。</p>
+<p>若主线程退出，协程即使没有实行完毕，也会退出。</p>
+<blockquote>
+<p>goroutine-MPG模式</p></blockquote>
+<p>1.主线程是一个物理线程，直接作用在CPU中，是重量级的，耗cpu；</p>
+<p>2.写成诗主线程开始的，是轻量级的线程，是逻辑态。</p>
+<p>M：代表真正的内核OS线程，和POSIX的thread差不多；</p>
+<p>P：代表一个go routine，它有自己的栈，用于调度；</p>
+<p>M：代表调度的上下文，可将它看作局部调度器，是实现N:1到N:M的关键。</p>
+<h3 id="72channel">7.2.Channel</h3>
+<blockquote>
+<p>不同的goroutine之间如何通讯？</p></blockquote>
+<p>如果说goroutine是go语言的并发体的话，那么channel则是他们之间的通信机制。</p>
+<p>1.channel 本质就是一个数据结构-队列</p>
+<p>2.数据是先进先出的</p>
+<p>3.线程安全，多routine访问时，不需要加锁</p>
+<p>使用内置的make函数，我们可以创建一个channel：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">ch :<span class="o">=</span> make<span class="o">(</span>chan int<span class="o">)</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>说明：channel是引用类型，并且必须初始化后才能使用</p>
+<p>和map类似，channel也对应一个make创建的递呈数据结构的引用。当我们复制一个hannel或用于函数参数传递时，我们只是拷贝了一个channel引用。</p>
+<p>一个channel有发送和接收两个主要操作，都是通信行为。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">ch &lt;- x  // a send statement
+</span></span><span class="line"><span class="cl"><span class="nv">x</span> <span class="o">=</span> &lt;-ch // a receive expression in an assignment statement
+</span></span><span class="line"><span class="cl">&lt;-ch     
+</span></span></code></pre></td></tr></table>
+</div>
+</div><blockquote>
+<p>注意事项</p></blockquote>
+<p>1.channel中只能存放指定的数据类型</p>
+<p>2.channel的数据放满后，就不能在放入了；</p>
+<p>3.如果从满channel中取出数据后，可以继续放入；</p>
+<p>4.在没有使用协程的情况下，channel中数据取完了再取，会报deadlock；</p>
+<p>5.channel可以声明为只读或只写性质，默认情况下，管道是双向的</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl"><span class="c1">#只写</span>
+</span></span><span class="line"><span class="cl">var 变量名 chan&lt;-类型
+</span></span><span class="line"><span class="cl"><span class="c1">#只读</span>
+</span></span><span class="line"><span class="cl">var 变量名 &lt;-chan 类型
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>6.使用select可以解决从管道中取数据的阻塞问题；</p>
+<p>7.goroutine中使用recover，解决写成中出现的panic导致程序崩溃问题。</p>
+<h4 id="721channel的关闭">7.2.1.channel的关闭</h4>
+<p>使用内置的close函数就可以关闭一个channel，当channel关闭后，就不能在想channel写数据了，但仍可以从该channel中读取数据。</p>
+<h4 id="722不带缓存的channel">7.2.2.不带缓存的channel</h4>
+<p>一个基于无缓存channel的发送操作将导致发送者goroutine阻塞成功，直到另一个goroutine在相同的channel上执行接受操作。</p>
+<p>也就是说，如果编译器运行时，发现一个管道只有写操作，而没有读操作，则该管道会阻塞，而写操作和读操作的频率不一致，无所谓。</p>
+</div><div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>更新于 0001-01-01</span>
+            </div></div>
+        <div class="post-info-line">
+            <div class="post-info-md"><span>
+                            <a class="link-to-markdown" href="/go%E8%AF%AD%E8%A8%80%E5%9C%A3%E7%BB%8F/index.md" target="_blank">阅读原始文档</a>
+                        </span></div>
+            <div class="post-info-share">
+                <span><a href="javascript:void(0);" title="分享到 Hacker News" data-sharer="hackernews" data-url="/go%E8%AF%AD%E8%A8%80%E5%9C%A3%E7%BB%8F/" data-title=""><i class="fab fa-hacker-news fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="分享到 Line" data-sharer="line" data-url="/go%E8%AF%AD%E8%A8%80%E5%9C%A3%E7%BB%8F/" data-title=""><i data-svg-src="/lib/simple-icons/icons/line.min.svg" aria-hidden="true"></i></a><a href="javascript:void(0);" title="分享到 微博" data-sharer="weibo" data-url="/go%E8%AF%AD%E8%A8%80%E5%9C%A3%E7%BB%8F/" data-title=""><i class="fab fa-weibo fa-fw" aria-hidden="true"></i></a></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">返回</a></span>&nbsp;|&nbsp;<span><a href="/">主页</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav">
+            <a href="/%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BAblog%E8%BF%87%E7%A8%8B/" class="next" rel="next" title="搭建个人blog过程">搭建个人blog过程<i class="fas fa-angle-right fa-fw" aria-hidden="true"></i></a></div>
+</div>
+</article></div>
+            </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line" itemscope itemtype="http://schema.org/CreativeWork"><i class="far fa-copyright fa-fw" aria-hidden="true"></i><span itemprop="copyrightYear">2019 - 2025</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="https://alancy.github.io" target="_blank">Alancy</a></span>&nbsp;|&nbsp;<span class="license">Based on <a href="https://github.com/dillonzq/LoveIt"> KeepIt </a><a title="爱探险的小鱼"> ❤️ </a></span></div>
+        </div>
+    </footer></div>
+
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="回到顶部">
+                <i class="fas fa-arrow-up fa-fw" aria-hidden="true"></i>
+            </a><a href="#" id="view-comments" class="fixed-button" title="查看评论">
+                <i class="fas fa-comment fa-fw" aria-hidden="true"></i>
+            </a>
+        </div><link rel="stylesheet" href="/lib/katex/katex.min.css"><link rel="stylesheet" href="/lib/cookieconsent/cookieconsent.min.css"><script type="text/javascript" src="/lib/autocomplete/autocomplete.min.js"></script><script type="text/javascript" src="/lib/lunr/lunr.min.js"></script><script type="text/javascript" src="/lib/lunr/lunr.stemmer.support.min.js"></script><script type="text/javascript" src="/lib/lunr/lunr.zh.min.js"></script><script type="text/javascript" src="/lib/lazysizes/lazysizes.min.js"></script><script type="text/javascript" src="/lib/clipboard/clipboard.min.js"></script><script type="text/javascript" src="/lib/sharer/sharer.min.js"></script><script type="text/javascript" src="/lib/katex/katex.min.js"></script><script type="text/javascript" src="/lib/katex/contrib/auto-render.min.js"></script><script type="text/javascript" src="/lib/katex/contrib/copy-tex.min.js"></script><script type="text/javascript" src="/lib/katex/contrib/mhchem.min.js"></script><script type="text/javascript" src="/lib/cookieconsent/cookieconsent.min.js"></script><script type="text/javascript">window.config={"code":{"copyTitle":"复制到剪贴板","maxShownLines":50},"comment":{},"cookieconsent":{"content":{"dismiss":"同意","link":"了解更多","message":"本网站使用 Cookies 来改善您的浏览体验."},"enable":true,"palette":{"button":{"background":"#f0f0f0"},"popup":{"background":"#1aa3ff"}},"theme":"edgeless"},"math":{"delimiters":[{"display":true,"left":"$$","right":"$$"},{"display":true,"left":"\\[","right":"\\]"},{"display":true,"left":"\\begin{equation}","right":"\\end{equation}"},{"display":true,"left":"\\begin{equation*}","right":"\\end{equation*}"},{"display":true,"left":"\\begin{align}","right":"\\end{align}"},{"display":true,"left":"\\begin{align*}","right":"\\end{align*}"},{"display":true,"left":"\\begin{alignat}","right":"\\end{alignat}"},{"display":true,"left":"\\begin{alignat*}","right":"\\end{alignat*}"},{"display":true,"left":"\\begin{gather}","right":"\\end{gather}"},{"display":true,"left":"\\begin{CD}","right":"\\end{CD}"},{"display":false,"left":"$","right":"$"},{"display":false,"left":"\\(","right":"\\)"}],"strict":false},"search":{"highlightTag":"em","lunrIndexURL":"/index.json","lunrLanguageCode":"zh","lunrSegmentitURL":"/lib/lunr/lunr.segmentit.js","maxResultLength":10,"noResultsFound":"没有找到结果","snippetLength":50,"type":"lunr"}};</script><script type="text/javascript" src="/js/theme.min.js"></script></body>
+</html>
